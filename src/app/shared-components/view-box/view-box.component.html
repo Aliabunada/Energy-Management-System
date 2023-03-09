@@ -1,0 +1,12 @@
+<div class="bg-light rounded d-flex flex-column align-items-start text-dark position-relative ml-auto p-5">
+  <div class="font-weight-bold fs-4">
+    {{ label }}
+  </div>
+  <div class="text-left d-flex flex-column">
+    <span class="fs-6">
+      {{ value || '-' }}
+    </span>
+
+    <ng-content></ng-content>
+  </div>
+</div>

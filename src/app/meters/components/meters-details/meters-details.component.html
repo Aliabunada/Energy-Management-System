@@ -1,0 +1,71 @@
+<div>
+  <div class="content d-flex flex-column flex-column-fluid">
+
+    <div class="container py-5">
+      <div class="card card-custom gutter-b">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col-md-4 mb-3">
+              <app-view-box label="Id" [value]="meterElement?.id"></app-view-box>
+
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <app-view-box label="Meter Name" [value]="meterElement?.name"></app-view-box>
+
+
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <app-view-box label="Energy Type" [value]="meterElement?.energyType"></app-view-box>
+
+
+            </div>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-md-4 mb-3">
+              <app-view-box label="Building Name" [value]="meterElement?.buildingName"></app-view-box>
+
+
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <app-view-box label="Model Name" [value]="meterElement?.modelName"></app-view-box>
+
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <app-view-box label="Usage" [value]="meterElement?.usage"></app-view-box>
+
+            </div>
+          </div>
+
+
+
+          <div class="row align-items-center">
+            <div class="col-md-4 mb-3">
+              <app-view-box label="Is Active?" value=" ">
+                <div *ngIf="meterElement?.active" class="text-left">
+                  <span class=" badge rounded-pill bg-success label-inline" title="True">
+                    Yes
+                  </span>
+                </div>
+                <div *ngIf="!meterElement?.active" class="text-left">
+                  <span class="badge rounded-pill bg-danger label-inline" title="False">
+                    No
+                  </span>
+                </div>
+              </app-view-box>
+            </div>
+            <div class="col-md-8 mb-3">
+              <app-view-box label="Description" [value]="meterElement?.description "></app-view-box>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,18 @@
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <div class="card-header">
+    {{meter.name}}
+  </div>
+  <img [src]="meter.image" class="card-img-top" [alt]="meter.modelName  " />
+  <div class="card-body ">
+    <div class="d-flex align-items-center ">
+      <h5 class=" card-title ">{{meter.modelName}}</h5>
+      <h5 class=" card-title ms-auto p-2">{{meter.id}}</h5>
+    </div>
+
+    <p class="card-text">{{meter.buildingName}} </p>
+    <p class="card-text">{{meter.energyType}} </p>
+    <p class="card-text ">{{meter.summaryOfdesc}}
+    </p>
+    <a class="btn btn-primary" [routerLink]="['Meter_Details']" [queryParams]="{id: meter.id}">show Meter Details</a>
+  </div>
+</div>
